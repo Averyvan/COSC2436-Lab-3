@@ -23,15 +23,15 @@ void speedBackwardsIterative(int);
 
 int main ()
 {
-int numTrials = 0;
-
-cout << "Enter Integer of trials for backwards file: ";
-cin >> numTrials;
-
-speedBackwardsIterative(numTrials);
-speedBackwardsRecursive(numTrials);
-
-return 0;
+	int numTrials = 0;
+	
+	cout << "Enter Integer of trials for backwards file: ";
+	cin >> numTrials;
+	
+	speedBackwardsIterative(numTrials);
+	speedBackwardsRecursive(numTrials);
+	
+	return 0;
 }
 
 
@@ -53,7 +53,7 @@ void speedBackwardsRecursive(int trials)
 		for (int i=1; i<=trials; i++)
 		{
 		backwardsRecursive("bible.txt"); //calls backwards Recursive and tests number of trials
-		if (i == 2500 || i == 5000 || i == 7500 || i == 10000) outFile<<"Runs: "<<i<<"\tTime: "<<(double(clock()) / CLOCKS_PER_SEC) - start<<" seconds"<<endl;
+//		if (i == 2500 || i == 5000 || i == 7500 || i == 10000) outFile<<"Runs: "<<i<<"\tTime: "<<(double(clock()) / CLOCKS_PER_SEC) - start<<" seconds"<<endl;
 		}
 		
 		//cout << "Fibonacci number is: " << fibonacciRecursive(num) << endl;
@@ -74,7 +74,7 @@ void speedBackwardsIterative(int trials)
 {
 	//int sum = 0;
 	
-	ofstream outFile("leipzig1mTrialOutput.txt", ios::binary | ios::trunc);
+//	ofstream outFile("bibleTrialOutput.txt", ios::binary | ios::trunc);
 
 	cout << "\n***Iterative Time***\n";
 	
@@ -87,7 +87,7 @@ void speedBackwardsIterative(int trials)
 		for (int i=0; i<=trials; i++)
 		{
 		backwardsIterative(); //calls backwards iterative and tests number of trials
-		if (i == 2500 || i == 5000 || i == 7500 || i == 10000) outFile<<"Runs: "<<i<<"\tTime: "<<(double(clock()) / CLOCKS_PER_SEC) - start<<" seconds"<<endl;
+//		if (i == 2500 || i == 5000 || i == 7500 || i == 10000) outFile<<"Runs: "<<i<<"\tTime: "<<(double(clock()) / CLOCKS_PER_SEC) - start<<" seconds"<<endl;
 		}
 		
 
@@ -102,6 +102,6 @@ void speedBackwardsIterative(int trials)
 	cout << "Time Elapsed to do Iterative: " << setw(5) << elapsed << " seconds" << endl; //displays elapsed time
 	cout << "Average time to do Itertive trial " << trials << " times: " << setw(5) << average << " seconds" << endl; //displays average
 	
-	outFile.close();
+//	outFile.close();
 }
 

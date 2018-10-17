@@ -35,8 +35,8 @@ OutputIterator backwardsCopy(BidirectionalIterator first, BidirectionalIterator 
 
 void backwardsIterative()
 {
-    ifstream input_file("leipzig1m.txt", std::ios_base::binary); // read text file
-    ofstream output_file("leipzig1m.reversed.txt", std::ios_base::binary | ios::trunc); // create new text file
+    ifstream input_file("bible.txt", std::ios_base::binary); // read text file
+    ofstream output_file("bible.reversed.txt", std::ios_base::binary | ios::trunc); // create new text file
     istreambuf_iterator<char> input_begin(input_file);
     istreambuf_iterator<char> input_end;
 	ostreambuf_iterator<char> output_begin(output_file);
